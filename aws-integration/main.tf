@@ -10,7 +10,7 @@
 
 module "common-fate-aws-roles" {
   source                                = "common-fate/common-fate-deployment/aws//modules/aws-idc-integration/iam-roles"
-  version                               = "1.16.0"
+  version                               = "1.22.0"
   common_fate_aws_account_id              = <Account ID of Common Fate>
   assume_role_external_id                 = <Your Common Fate Customer ID>
   permit_group_assignment               = true # Only needs to be set if you want JIT assignment for AWS groups
