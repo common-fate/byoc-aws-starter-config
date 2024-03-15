@@ -2,7 +2,7 @@ terraform {
   required_providers {
     commonfate = {
       source  = "common-fate/commonfate"
-      version = "2.9.0"
+      version = "2.13.0"
     }
   }
 }
@@ -20,4 +20,18 @@ resource "commonfate_aws_idc_integration" "main" {
   identity_store_id = "d-123456abcd"
   sso_instance_arn  = "arn:aws:sso:::instance/ssoins-34567890vfftygfh"
   sso_region        = "us-east-1"
+}
+
+resource "commonfate_webhook_provisioner" "aws" {
+  url = "http://common-fate-prod-builtin-provisioner.common-fate-prod-builtin.internal:9999"
+  capabilities = [
+    {
+      target_type = "AWS::Account"
+      role_type   = "AWS::IDC::PermissionSet"
+      belonging_to = {
+        type = "AWS::Organization"
+        id   = "<Your AWS Organization ID>"
+      }
+    },
+  ]
 }
