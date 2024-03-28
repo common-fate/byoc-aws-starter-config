@@ -9,8 +9,8 @@ terraform {
 provider "commonfate" {
   # To deploy the stack you must export CF_OIDC_CLIENT_SECRET=<Your Client Secret>
   api_url            = "http://commonfate.example.com"
-  oidc_client_id     = "349dfdfkljwerpoizxckf3fds345xcvv"
-  oidc_issuer        = "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_jieDxjtS"
+  oidc_client_id     = "349dfdfkljwerpoizxckf3fds345xcvv" # terraform_client_id from deployment/main.tf's terraform output
+  oidc_issuer        = "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_jieDxjtS" # auth_issuer from deployment/main.tf's terraform output
 }
 
 
