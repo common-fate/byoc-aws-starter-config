@@ -1,4 +1,4 @@
 resource "commonfate_policyset" "example" {
-  id   = "example"
+  id   = "default"
   text = file("policies/example.cedar")
 }
