@@ -18,7 +18,7 @@ resource "commonfate_aws_idc_integration" "main" {
   reader_role_arn   = <The Reader Role ARN from aws-integration/main.tf's terraform output (e.g. "arn:aws:iam::123456789:role/common-fate-prod-idc-reader-role")>
   identity_store_id = <Your AWS SSO Instance Identity Store ID (e.g. d-123456abcd)>
   sso_instance_arn  = <Your AWS account's sso instance arn (e.g. "arn:aws:sso:::instance/ssoins-34567890vfftygfh")>
-  sso_region        =  <Your AWS account's sso region>
+  sso_region        =  <Your AWS SSO Instance region (e.g. us-east-1)>
 }
 
 resource "commonfate_webhook_provisioner" "aws" {
