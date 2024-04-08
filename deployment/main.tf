@@ -8,6 +8,8 @@ module "common-fate-deployment" {
   app_certificate_arn = "<ARN of the certificate>"
 
   app_url = "https://commonfate.example.com <replace this>"
+
+  assume_role_external_id = <A random string which is used in aws-integration/main.tf when assuming cross-account AWS roles for auditing and provisioning>
 }
 
 output "outputs" {
