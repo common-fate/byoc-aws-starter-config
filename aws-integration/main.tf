@@ -10,9 +10,9 @@
 
 module "common-fate-aws-roles" {
   source                                = "common-fate/common-fate-deployment/aws//modules/aws-idc-integration/iam-roles"
-  version                               = "1.22.0"
-  common_fate_aws_account_id              = <Account ID of Common Fate>
-  assume_role_external_id                 = <Your Common Fate Customer ID>
+  version                               = "1.32.0"
+  common_fate_aws_account_id              = <The ID of the account where Common Fate is deployed>
+  assume_role_external_id                 = <A random string which must match the 'assume_role_external_id' on your Common Fate deployment Terraform module>
   permit_group_assignment               = true # Only needs to be set if you want JIT assignment for AWS groups
   permit_management_account_assignments = true # Only needs to be set if you want Common Fate to grant access to your organization root account
   permit_provision_permission_sets      = true # Only needs to be set if you are using resource based intgrations such as our AWS RDS intgration
