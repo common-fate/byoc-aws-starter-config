@@ -1,6 +1,6 @@
 module "common-fate-deployment" {
   source  = "common-fate/common-fate-deployment/aws"
-  version = "1.45.2"
+  version = "2.7.1"
 
   aws_region = "us-east-1 <replace this>"
 
