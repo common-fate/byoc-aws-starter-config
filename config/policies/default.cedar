@@ -53,12 +53,3 @@ permit (
     resource
 );
 
-
-permit (
-    principal ==
-        CF::User::<Replace with your own user id from CF web console>,
-    action ==
-        CF::RPC::Action::"commonfate.control.integration.v1alpha1.IntegrationService/ListSyncsForIntegration",
-    resource ==
-        CF::Service::"ControlPlane",
-);
