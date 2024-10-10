@@ -48,7 +48,7 @@ when { principal == resource.principal };
 
 // Allow admins to read all resources
 permit (
-    principal,
+    principal in Entra::Group::"ID_OF_COMMON_FATE_ADMINISTRATOR_GROUP",
     action in CF::Admin::Action::"Read",
     resource
 );
