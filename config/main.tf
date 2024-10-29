@@ -2,7 +2,7 @@ terraform {
   required_providers {
     commonfate = {
       source  = "common-fate/commonfate"
-      version = "2.26.1"
+      version = "2.27.1"
     }
   }
 }
